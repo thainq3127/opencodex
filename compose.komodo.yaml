@@ -5,6 +5,8 @@ services:
     image: ghcr.io/thainq3127/opencodex:latest
     init: true
     read_only: true
+    environment:
+      OPENCODEX_ADMIN_AUTH_TOKEN: ${OPENCODEX_ADMIN_AUTH_TOKEN:-}
     ports:
       - "10100:10100"
     volumes:
